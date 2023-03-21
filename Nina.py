@@ -111,4 +111,5 @@ if __name__ == '__main__':
             webbrowser.open("www.hackerrank.com")
         elif 'exit' in query or 'quit' in query:
             print("Nina: You exited")
+            # and now we can exit using exit()
             exit()
