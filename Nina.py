@@ -99,53 +99,16 @@ if __name__ == '__main__':
         elif 'open data structure playlist' in query:
             print("Nina: Opening Data Structure and Algorithm playlist")
             webbrowser.open("www.youtube.com/playlist?list=PLu0W_9lII9ahIappRPN0MCAgtOu3lQjQi")
-        elif 'open my batches' in query:
-            print("Nina: Opening Physics Wallah: Your Batches")
-            webbrowser.open("https://www.pw.live/study/batches/study/my-batches")
         elif 'news' in query:
             try:
                 print("Nina: Opening News..")
-                os.startfile(r"c:\Users\dola\PycharmProjects\pythonLang\exer9.py")
+                os.startfile(r"exer9.py")
             except Exception as e:
                 print("Nina: Sorry, I am not able to open news.")
                 speak("Sorry, I am not able to open news.")
         elif 'open hackerrank' in query:
             print("Nina: Opening Hakerrank")
-            webbrowser.open("www.hackerrank.com/dashboard")
-        elif 'new folder' in query:
-            print("Nina: What will be the name of new folder?")
-            speak("What will be the name of new folder?")
-            name = takeCommand().lower()
-            try:
-                if name != "none":
-                    os.mkdir(f'C:\\Users\\dola\\Desktop\\{name}')
-                    print(f"Nina: I successfully made {name} folder.")
-                    speak(f"I successfully made {name} folder.")
-                else:
-                    raise Exception("sorry")
-            except Exception as e:
-                print("Nina: Sorry, I am not able to make new folder.")
-                speak("Sorry, I am not able to make new folder.")
-        elif 'play game' in query:
-            print("Nina: Which game you want to play?")
-            speak("Which game you want to play?")
-            game = takeCommand().lower()
-            try:
-                if game != "none":
-                    if game == "ghost":
-                        print(f"Opening {game} game...")
-                        os.startfile("C:\\Users\\dola\\Desktop\\computer\\game.html")
-                    elif game == "snake":
-                        print(f"Opening {game} game...")
-                        os.startfile("C:\\Users\\dola\\Desktop\\computer\\Snake game\\index.html")
-                    else:
-                        print(f"Nina: No {game} game found!!")
-                        speak(f"No {game} game found!!")
-                else:
-                    raise Exception("Sorry")
-            except Exception as e:
-                print("Nina: Sorry, I am not able to open your game")
-                speak("Sorry, I am not able to open your game")
+            webbrowser.open("www.hackerrank.com")
         elif 'exit' in query or 'quit' in query:
             print("Nina: You exited")
             exit()
